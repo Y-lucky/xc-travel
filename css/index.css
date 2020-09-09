@@ -1,0 +1,368 @@
+.search-index {
+    display: flex;
+    /* 固定定位与屏幕为主 */
+    position: fixed;
+    top: 0;
+    left: 50%;
+    /* 自身宽度的50% */
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
+    height: 44px;
+    max-width: 546px;
+    min-width: 320px;
+    box-sizing: border-box;
+}
+
+.search {
+    position: relative;
+    height: 30px;
+    line-height: 28px;
+    border: 1px solid #ccc;
+    margin: 7px 10px;
+    padding-left: 25px;
+    border-radius: 15px;
+    flex: 1;
+    font-size: 14px;
+    background-color: #fff;
+    color: #222;
+}
+
+.search::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    background: url("../img/home.png") no-repeat;
+    background-size: 21px auto;
+}
+
+.user {
+    width: 44px;
+    height: 44px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+.user::before {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    background: url("../img/home.png") no-repeat 0 -34px;
+    /* 图片整体缩放 */
+    background-size: 21px auto;
+    margin: 2px auto 0;
+}
+
+.focus img {
+    width: 100%;
+}
+
+.local-nav {
+    display: flex;
+    height: 60px;
+    background-color: #fff;
+    margin: 3px 4px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.local-nav li {
+    flex: 1;
+}
+
+.local-nav a {
+    display: flex;
+    /* 居中水平对齐 */
+    flex-direction: column;
+    /* 测轴居中对齐 */
+    align-items: center;
+}
+
+.local-nav li [class^="local-nav-icon"] {
+    height: 35px;
+    width: 35px;
+    background: url(../img/home-fivemain-sprite2x@v7.15.png) no-repeat 0 0;
+    background-size: 35px auto;
+}
+
+.local-nav li .local-nav-icon-icon2 {
+    background-position: 0 -35px;
+}
+
+.local-nav li .local-nav-icon-icon3 {
+    background-position: 0 -70px;
+}
+
+.local-nav li .local-nav-icon-icon4 {
+    background-position: 0 -105px;
+}
+
+.local-nav li .local-nav-icon-icon5 {
+    background-position: 0 -140px;
+}
+
+
+/* nav */
+
+nav {
+    border-radius: 8px;
+    margin: 0 4px;
+    overflow: hidden;
+}
+
+.nav-common {
+    display: flex;
+    height: 88px;
+    background-color: indigo;
+}
+
+.nav-common:nth-child(2) {
+    margin: 4px 0;
+}
+
+.nav-items {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+
+/* -n+2选择前面两个 */
+
+.nav-items:nth-child(-n+2) {
+    border-right: 1px solid #ccc;
+}
+
+.nav-items a {
+    flex: 1;
+    text-align: center;
+    line-height: 44px;
+    color: #ccc;
+    text-shadow: 1px 1px rgba(0, 0, 0, .2);
+}
+
+.nav-items a:nth-child(1) {
+    border-bottom: 1px solid #ccc;
+}
+
+
+/* 第一列下的a不需要下边框 */
+
+.nav-items:nth-child(1) a {
+    border: 0;
+    background: url(../img/grid-nav-items-hotel@v7.15.png) no-repeat bottom center;
+    background-size: 100px auto;
+}
+
+.nav-common:nth-child(1) {
+    background: -webkit-linear-gradient(left, #4b0082, #526aba);
+}
+
+.nav-common:nth-child(2) {
+    background: -webkit-linear-gradient(left, #810179, #9163cc);
+}
+
+.nav-common:nth-child(3) {
+    background: -webkit-linear-gradient(left, #3a683e, #9163cc);
+}
+
+.subnav-entry {
+    display: flex;
+    margin: 3px 0;
+    border-radius: 8px;
+    /* 强制换行 */
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.subnav-entry li {
+    /* 里面的盒子可以写百分比，相对父级来说 */
+    flex: 20%;
+}
+
+.subnav-entry a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subnav-entry li [class^="subnav-entry-icon"] {
+    height: 28px;
+    width: 28px;
+    margin: 5px 0;
+    background: url(../img/un_ico_subnav2x@v7.152.png) no-repeat;
+    background-size: 28px auto;
+}
+
+.subnav-entry li .subnav-entry-icon-icon2 {
+    background-position: 0 -28px;
+}
+
+.subnav-entry li .subnav-entry-icon-icon3 {
+    background-position: 0 -53px;
+}
+
+.subnav-entry li .subnav-entry-icon-icon4 {
+    background-position: 0 -81px;
+}
+
+.subnav-entry li .subnav-entry-icon-icon5 {
+    background-position: 0 -109px;
+}
+
+.subnav-entry li .subnav-entry-icon-icon6 {
+    background-position: 0 -137px;
+}
+
+.subnav-entry li .subnav-entry-icon-icon7 {
+    background-position: 0 -165px;
+}
+
+.subnav-entry li .subnav-entry-icon-icon8 {
+    background-position: 0 -193px;
+}
+
+.subnav-entry li .subnav-entry-icon-icon9 {
+    background-position: 0 -221px;
+}
+
+.subnav-entry li .subnav-entry-icon-icon10 {
+    background-position: 0 -249px;
+}
+
+.sales-box {
+    margin-top: 10px;
+    border-top: 2px solid #ccc;
+}
+
+.sales-hd {
+    position: relative;
+    height: 44px;
+    padding-left: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+.sales-hd h3 {
+    line-height: 44px;
+}
+
+.more {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 3px 20px 3px 10px;
+    background-color: blueviolet;
+    border-radius: 15px;
+    color: #fff;
+    background: -webkit-linear-gradient(left, #4b0082, #526aba);
+}
+
+.more::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 9px;
+    height: 7px;
+    width: 7px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+}
+
+.row {
+    display: flex;
+}
+
+.row a {
+    flex: 1;
+}
+
+.row img {
+    width: 100%;
+}
+
+.tool-cn {
+    display: flex;
+    height: 60px;
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.tool-cn a {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tool-cn a [class^="tool-cn-icon"] {
+    height: 20px;
+    width: 20px;
+    margin: 5px 0;
+    background: url(../img/un_ico_home_v620.png) no-repeat -57px -150px;
+    background-size: 104px auto;
+}
+
+
+/* 权重 */
+
+.tool-cn a .tool-cn-icon-icon2 {
+    background-position: -57px -172px;
+}
+
+.tool-cn a .tool-cn-icon-icon3 {
+    background-position: -58px -308px;
+}
+
+.tool-box {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.tool-ver {
+    color: #999;
+    font-size: 15px;
+    margin: 7px 10px;
+}
+
+.tool-ver a {
+    position: relative;
+    padding: 0 10px;
+}
+
+.tool-ver a:nth-child(2) {
+    padding: 0 25px 0 18px;
+}
+
+.tool-ver a:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: 12px;
+    height: 6px;
+    width: 6px;
+    border-top: 1px solid #666;
+    border-right: 1px solid #666;
+    transform: rotate(135deg);
+}
+
+.icon-global {
+    position: absolute;
+    top: 1px;
+    left: 3px;
+    height: 15px;
+    width: 15px;
+    background: url(../img/un_icon_sites.png) no-repeat 0 -158px;
+    background-size: 30px auto;
+}
+
+.link-icp {
+    padding: 10px 0;
+    color: #ccc;
+}
